@@ -1,0 +1,33 @@
+********************************************************************************
+*                          23 апреля 2018 г. 22:43:23                          *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.1.209
+Unity version: 2017.4
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: D:\Myfiles\Projects\University\Unity Game\role-playing game
+Target profile directory: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity
+Unity Mono executable: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.6.0.62329)
+
+- Compilation -----------------------------------------------
+
+Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-9a361a3fa441cd14cb6c7c965082f2e3
+Exit code: 0
+Elapsed time: 9,99 sec
+
+- Compiler output (1 line):
+0: Assets\Scripts\Character.cs(116,22): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0,42 sec
+
+- pdb2mdb.exe output (0 lines):
+
