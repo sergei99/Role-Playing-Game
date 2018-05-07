@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 169ed4a8bdd46f641aefaf068b04ae0c
+timeCreated: 1525712992
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bottom_left_edge_: {fileID: 1203891488650570, guid: 0411304378d527345b55911c739256e6,
+      type: 2}
+  - bottom_right_edge_: {fileID: 1618677726881822, guid: 7ca8d5ec13020a745b5acd7a68387814,
+      type: 2}
+  - top_left_edge_: {fileID: 1789919235627988, guid: 0944261870d2a5d48abc6bdea1c72b83,
+      type: 2}
+  - top_right_edge_: {fileID: 1662231219311764, guid: 81c29578012227e41b2b72142a6f2801,
+      type: 2}
+  - ceiling_: {fileID: 1702501116199582, guid: a3c757b59f7450242a62747280a33588, type: 2}
+  - floor_: {fileID: 1737270337087732, guid: 78f3357348ba7ce41afff49e7e36927c, type: 2}
+  - left_wall_: {fileID: 1560364717507724, guid: b570fa94ee5560a4098d044b707fd830,
+      type: 2}
+  - right_wall_: {fileID: 1327819173234804, guid: ea9c2c1153b94c448b3ade89e2e22173,
+      type: 2}
+  - left_platform_: {fileID: 1657849803486902, guid: 14d8f9e25fe8d6b4e9a0724783f656c6,
+      type: 2}
+  - right_platform_: {fileID: 1517758534378546, guid: a14e241e9ac1e6c469ae45a338200cc9,
+      type: 2}
+  - platform_: {fileID: 1169125673697452, guid: 2e0e16d338fe1a6429f429189bc670c4,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
