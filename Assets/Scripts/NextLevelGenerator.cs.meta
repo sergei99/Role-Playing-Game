@@ -14,6 +14,14 @@ MonoImporter:
       type: 2}
   - top_right_edge_: {fileID: 1662231219311764, guid: 81c29578012227e41b2b72142a6f2801,
       type: 2}
+  - bottom_left_out_: {fileID: 1647318164985234, guid: a8ec6b418cb180c4e82c4f072767ba77,
+      type: 2}
+  - bottom_right_out_: {fileID: 1038741083873368, guid: eea113b3a62454d48a41aa6cb61773bf,
+      type: 2}
+  - top_left_out_: {fileID: 1717906378117242, guid: cec45744566533e47b8f26e94b486293,
+      type: 2}
+  - top_right_out: {fileID: 1302695118336660, guid: 0edbc32a03f7d7541ac57b96c59afdae,
+      type: 2}
   - ceiling_: {fileID: 1702501116199582, guid: a3c757b59f7450242a62747280a33588, type: 2}
   - floor_: {fileID: 1737270337087732, guid: 78f3357348ba7ce41afff49e7e36927c, type: 2}
   - left_wall_: {fileID: 1560364717507724, guid: b570fa94ee5560a4098d044b707fd830,
@@ -25,6 +33,12 @@ MonoImporter:
   - right_platform_: {fileID: 1517758534378546, guid: a14e241e9ac1e6c469ae45a338200cc9,
       type: 2}
   - platform_: {fileID: 1169125673697452, guid: 2e0e16d338fe1a6429f429189bc670c4,
+      type: 2}
+  - left_stairs_: {fileID: 1282581505421644, guid: 2d1affaa0b6d4304ab3c7f6633f8b10c,
+      type: 2}
+  - right_stairs_: {fileID: 1791269171708544, guid: 188395e5fcbb48d459940bda3baa769d,
+      type: 2}
+  - next_level_: {fileID: 1781009826561418, guid: 8525fad5521d2f34b8b7a777f4e21308,
       type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
