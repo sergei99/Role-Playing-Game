@@ -26,7 +26,7 @@ public class HeroControler : MonoBehaviour {
         {
             return (HeroState)animator_.GetInteger("State");
         }
-    }
+    } 
 
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class HeroControler : MonoBehaviour {
 
     void Update ()
     {
-       // State = HeroState.Idle1;
+        State = HeroState.Idle1;
         if (Input.GetButton("Horizontal"))
         {
             Move();

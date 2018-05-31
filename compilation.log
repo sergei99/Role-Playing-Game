@@ -1,5 +1,5 @@
 ********************************************************************************
-*                           31 мая 2018 г. 13:02:17                            *
+*                           31 мая 2018 г. 14:35:29                            *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 4.0.1.209
 Unity version: 2017.4
@@ -13,9 +13,9 @@ Compiler: Microsoft C# 7.2 (2.6.0.62329)
 - Compilation -----------------------------------------------
 
 Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
-Arguments: -noconfig @Temp/UnityTempFile-2f64bf2ad8c32374faf76e207dc65911
+Arguments: -noconfig @Temp/UnityTempFile-a89abc66d05a94f4fad53bc82ac15bed
 Exit code: 0
-Elapsed time: 5,68 sec
+Elapsed time: 6,05 sec
 
 - Compiler output (2 lines):
 0: Assets\Scripts\MonsterAI.cs(8,26): warning CS0649: Field 'MonsterAI.state_' is never assigned to, and will always have its default value
@@ -28,75 +28,7 @@ Elapsed time: 5,68 sec
 Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0,33 sec
-
-- pdb2mdb.exe output (0 lines):
-
-********************************************************************************
-*                           31 мая 2018 г. 13:03:22                            *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 4.0.1.209
-Unity version: 2017.4
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: D:\Myfiles\Projects\University\Unity Game\role-playing game
-Target profile directory: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity
-Unity Mono executable: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
-Compiler: Microsoft C# 7.2 (2.6.0.62329)
-
-- Compilation -----------------------------------------------
-
-Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
-Arguments: -noconfig @Temp/UnityTempFile-d25e183373e2a9c4aa262dcfb887eaeb
-Exit code: 0
-Elapsed time: 5,75 sec
-
-- Compiler output (2 lines):
-0: Assets\Scripts\MonsterAI.cs(8,26): warning CS0649: Field 'MonsterAI.state_' is never assigned to, and will always have its default value
-1: Assets\Scripts\Hero.cs(13,18): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0,33 sec
-
-- pdb2mdb.exe output (0 lines):
-
-********************************************************************************
-*                           31 мая 2018 г. 13:08:16                            *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 4.0.1.209
-Unity version: 2017.4
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: D:\Myfiles\Projects\University\Unity Game\role-playing game
-Target profile directory: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity
-Unity Mono executable: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
-Compiler: Microsoft C# 7.2 (2.6.0.62329)
-
-- Compilation -----------------------------------------------
-
-Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
-Arguments: -noconfig @Temp/UnityTempFile-c1fe205e9bc7a8f44a162eebb6d02cbe
-Exit code: 0
-Elapsed time: 5,32 sec
-
-- Compiler output (2 lines):
-0: Assets\Scripts\MonsterAI.cs(8,26): warning CS0649: Field 'MonsterAI.state_' is never assigned to, and will always have its default value
-1: Assets\Scripts\Hero.cs(13,18): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0,33 sec
+Elapsed time: 0,35 sec
 
 - pdb2mdb.exe output (0 lines):
 
