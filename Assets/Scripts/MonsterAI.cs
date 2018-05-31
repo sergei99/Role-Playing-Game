@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MonsterAI : MonoBehaviour {
 
-    public enum MonsterState { patrol, track};
+    public enum MonsterState { idle, move, attack, hurt, die};
     private MonsterState state_;
-    public MonsterState Monster_state
+    public MonsterState monster_state
     {
         get
         {
@@ -14,33 +14,10 @@ public class MonsterAI : MonoBehaviour {
         }
     }
 
-    private int direction = 1;
-
-    Transform current;
-
-    private void Patroling()
-    {
-        while(true)
-        {
-            transform.position.Set(transform.position.x + 1, transform.position.y, 0);
-        }
-    }
-
-    private void Traking()
-    {
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        direction *= -1;
-    }
-
     // Use this for initialization
     void Start ()
     {
-        current = GetComponent<Transform>();
-        Patroling();
+
 	}
 	
 	// Update is called once per frame

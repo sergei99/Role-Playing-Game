@@ -1,5 +1,5 @@
 ********************************************************************************
-*                           14 мая 2018 г. 18:41:11                            *
+*                           31 мая 2018 г. 13:02:17                            *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 4.0.1.209
 Unity version: 2017.4
@@ -13,13 +13,13 @@ Compiler: Microsoft C# 7.2 (2.6.0.62329)
 - Compilation -----------------------------------------------
 
 Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
-Arguments: -noconfig @Temp/UnityTempFile-28f2ee4018e8f0f44a1c1f484837128e
+Arguments: -noconfig @Temp/UnityTempFile-2f64bf2ad8c32374faf76e207dc65911
 Exit code: 0
-Elapsed time: 6,28 sec
+Elapsed time: 5,68 sec
 
 - Compiler output (2 lines):
 0: Assets\Scripts\MonsterAI.cs(8,26): warning CS0649: Field 'MonsterAI.state_' is never assigned to, and will always have its default value
-1: Assets\Scripts\Character.cs(116,22): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
+1: Assets\Scripts\Hero.cs(13,18): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
 
 - Compiler errors (0 lines):
 
@@ -28,44 +28,12 @@ Elapsed time: 6,28 sec
 Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0,45 sec
+Elapsed time: 0,33 sec
 
 - pdb2mdb.exe output (0 lines):
 
 ********************************************************************************
-*                           14 мая 2018 г. 18:41:33                            *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 4.0.1.209
-Unity version: 2017.4
-Platform: Windows
-Target assembly: Assembly-CSharp-firstpass.dll
-Project directory: D:\Myfiles\Projects\University\Unity Game\role-playing game
-Target profile directory: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity
-Unity Mono executable: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
-Compiler: Microsoft C# 7.2 (2.6.0.62329)
-
-- Compilation -----------------------------------------------
-
-Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
-Arguments: -noconfig @Temp/UnityTempFile-12f00b8060b99984cb5ce9276661fd00
-Exit code: 0
-Elapsed time: 2,93 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-firstpass.dll
-Exit code: 0
-Elapsed time: 0,26 sec
-
-- pdb2mdb.exe output (0 lines):
-
-********************************************************************************
-*                           14 мая 2018 г. 18:41:37                            *
+*                           31 мая 2018 г. 13:03:22                            *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 4.0.1.209
 Unity version: 2017.4
@@ -79,13 +47,13 @@ Compiler: Microsoft C# 7.2 (2.6.0.62329)
 - Compilation -----------------------------------------------
 
 Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
-Arguments: -noconfig @Temp/UnityTempFile-e46521a409cecaf43b67305325ff66d6
+Arguments: -noconfig @Temp/UnityTempFile-d25e183373e2a9c4aa262dcfb887eaeb
 Exit code: 0
-Elapsed time: 5,49 sec
+Elapsed time: 5,75 sec
 
 - Compiler output (2 lines):
 0: Assets\Scripts\MonsterAI.cs(8,26): warning CS0649: Field 'MonsterAI.state_' is never assigned to, and will always have its default value
-1: Assets\Scripts\Character.cs(116,22): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
+1: Assets\Scripts\Hero.cs(13,18): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
 
 - Compiler errors (0 lines):
 
@@ -94,7 +62,41 @@ Elapsed time: 5,49 sec
 Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0,28 sec
+Elapsed time: 0,33 sec
+
+- pdb2mdb.exe output (0 lines):
+
+********************************************************************************
+*                           31 мая 2018 г. 13:08:16                            *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.1.209
+Unity version: 2017.4
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: D:\Myfiles\Projects\University\Unity Game\role-playing game
+Target profile directory: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity
+Unity Mono executable: D:\Programs\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.6.0.62329)
+
+- Compilation -----------------------------------------------
+
+Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-c1fe205e9bc7a8f44a162eebb6d02cbe
+Exit code: 0
+Elapsed time: 5,32 sec
+
+- Compiler output (2 lines):
+0: Assets\Scripts\MonsterAI.cs(8,26): warning CS0649: Field 'MonsterAI.state_' is never assigned to, and will always have its default value
+1: Assets\Scripts\Hero.cs(13,18): warning CS0414: The field 'Hero.experience' is assigned but its value is never used
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: D:\Myfiles\Projects\University\Unity Game\role-playing game\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0,33 sec
 
 - pdb2mdb.exe output (0 lines):
 
