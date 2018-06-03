@@ -7,7 +7,7 @@ public class HeroControler : MonoBehaviour {
     private Rigidbody2D rigidbody_;
     private Animator animator_;
     private SpriteRenderer sprite_;
-    private BoxCollider2D box_colider_;
+    private BoxCollider2D box_collider_;
 
     private int speed_ = 8;
     private int jump_force_ = 25;
@@ -33,7 +33,7 @@ public class HeroControler : MonoBehaviour {
         rigidbody_ = GetComponent<Rigidbody2D>();
         animator_ = GetComponent<Animator>();
         sprite_ = GetComponent<SpriteRenderer>();
-        box_colider_ = GetComponent<BoxCollider2D>();
+        box_collider_ = GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()
@@ -81,9 +81,9 @@ public class HeroControler : MonoBehaviour {
 
     private void CheckGround()
     {
-        Collider2D[] coliders = Physics2D.OverlapBoxAll(transform.position - new Vector3(0, 1.15f), new Vector2(1, 0.2f), 0);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position - new Vector3(0, 1.15f), new Vector2(1, 0.2f), 0);
 
-        is_grounded_ = coliders.Length > 1;
+        is_grounded_ = colliders.Length > 1;
         
     }
 }
