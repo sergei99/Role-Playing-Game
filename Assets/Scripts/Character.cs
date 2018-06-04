@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace GameCore
@@ -20,8 +21,8 @@ namespace GameCore
         public bool Move { set; get; } = true;
 
 
-        private uint hp = 0;
-        public uint HP
+        private int hp = 0;
+        public int HP
         {
             set
             {
@@ -42,8 +43,8 @@ namespace GameCore
             }
         }
 
-        private uint maxHp = 0;
-        public uint MaxHP
+        private int maxHp = 0;
+        public int MaxHP
         {
             set
             {
@@ -60,13 +61,19 @@ namespace GameCore
             }
         }
 
-        protected Character(string Name, uint MaxHP = 0, uint Age = 0)
+        protected Character(string Name, int MaxHP = 0, uint Age = 0)
         {
             this.ID = nextID;
             this.Name = Name;
             this.hp = MaxHP;
+            this.MaxHP = MaxHP;
             this.Age = Age;
             ++nextID;
+        }
+
+        public void TakeDamage(int amount)
+        {
+            HP -= amount;
         }
 
         private void UpdateState()
@@ -102,10 +109,37 @@ namespace GameCore
         public enum CharacterRace { People, Dwarf, Elf, Orc, Goblin };
         public CharacterRace Race { get; }
 
-        private uint experience = 0;
-        public uint Experience { set; get; }
+        private uint lvl = 0;
+        public uint Level
+        {
+            get
+            {
+                return lvl;
+            }
+        }
 
-        public Hero(string Name, uint MaxHP = 0, uint Age = 0, CharacterGender Gender = CharacterGender.Male, CharacterRace Race = CharacterRace.People) : base(Name, MaxHP, Age)
+        private uint experience = 0;
+        public uint Experience
+        {
+            set
+            {
+                experience = value;
+                lvl = (uint)Math.Log(experience);
+            }
+
+            get
+            {
+                return experience;
+            }
+        }
+
+
+        public void GainExperience()
+        {
+
+        }
+
+        public Hero(string Name, int MaxHP = 0, uint Age = 0, CharacterGender Gender = CharacterGender.Male, CharacterRace Race = CharacterRace.People) : base(Name, MaxHP, Age)
         {
             this.Gender = Gender;
             this.Race = Race;
@@ -120,8 +154,8 @@ namespace GameCore
 
     public class Magician : Hero
     {
-        private uint mp;
-        public uint MP
+        private int mp;
+        public int MP
         {
             set
             {
@@ -141,8 +175,8 @@ namespace GameCore
             }
         }
 
-        private uint maxMp;
-        public uint MaxMP
+        private int maxMp;
+        public int MaxMP
         {
             set
             {
@@ -161,7 +195,7 @@ namespace GameCore
         }
 
 
-        public Magician(string Name, uint MaxHP = 0, uint Age = 0, uint MaxMP = 0, CharacterGender Gender = CharacterGender.Male,
+        public Magician(string Name, int MaxHP = 0, uint Age = 0, int MaxMP = 0, CharacterGender Gender = CharacterGender.Male,
             CharacterRace Race = CharacterRace.People) : base(Name, MaxHP, Age, Gender, Race)
         {
             this.mp = MaxMP;
@@ -176,7 +210,7 @@ namespace GameCore
     public class Enemy : Character
     {
 
-        public Enemy(string Name, uint MaxHP = 0) : base(Name, MaxHP)
+        public Enemy(string Name, int MaxHP = 0) : base(Name, MaxHP)
         {
 
         }

@@ -9,8 +9,8 @@ public class MonsterAI : MonoBehaviour {
 
     private Enemy monster;
 
-    public string name;
-    public uint max_hp;
+    public string name = "";
+    public int max_hp = 50;
 
     private Rigidbody2D rigidbody_;
     private Animator animator_;
@@ -20,10 +20,13 @@ public class MonsterAI : MonoBehaviour {
     private Vector3 start_position_;
 
     private GameObject Hero;
+    private CircleCollider2D hero_circle_collider_;
+    private EdgeCollider2D hero_edge_collider_;
 
     public float agro_range = 5;
     public float attack_range = 2f;
     public int speed = 2;
+    public uint exp_reward = 1;
 
     private delegate void  MonserBehaviour();
     MonserBehaviour MBehaviour;
@@ -51,6 +54,8 @@ public class MonsterAI : MonoBehaviour {
         sprite_ = GetComponent<SpriteRenderer>();
         collider_ = GetComponent<BoxCollider2D>();
         Hero = GameObject.FindWithTag("Player");
+        hero_circle_collider_ = Hero.GetComponent<CircleCollider2D>();
+        hero_edge_collider_ = Hero.GetComponent<EdgeCollider2D>();
         last_position_value_ = transform.position;
         monster = new Enemy(name, max_hp);
     }
@@ -58,13 +63,22 @@ public class MonsterAI : MonoBehaviour {
     private void FixedUpdate()
     {
         CheckForPlayer();
+        CheckForDamage();
     }
 
-    void Update ()
+    bool update_flag = true;
+    void Update()
     {
-        State = MonsterState.Idle;
-        MBehaviour();
-	}
+        if (update_flag)
+        {
+            State = MonsterState.Idle;
+            MBehaviour();
+            if (!isAlive)
+            {
+                update_flag = false;
+            }
+        }
+    }
 
     private void MoveToTarget(Vector3 target)
     {
@@ -87,19 +101,23 @@ public class MonsterAI : MonoBehaviour {
         State = MonsterState.Attack;
     }
 
-    private void Hurt()
-    {
-        
-    }
-
     private void Die()
     {
+        State = MonsterState.Die;
+        Destroy(gameObject, 1);
+        ValueControler.Expirience += exp_reward;
+    }
 
+    private void Hurt()
+    {
+        TakeDamage((int)ValueControler.Strength);
+        State = MonsterState.Hurt;
     }
 
     private void TakeDamage(int amount)
     {
-
+        monster.TakeDamage(amount);
+        State = MonsterState.Hurt;
     }
 
     private int norm_direction_ = 1;
@@ -162,5 +180,23 @@ public class MonsterAI : MonoBehaviour {
         }
     }
 
-
+    int damage_timer_ = 0;
+    bool isAlive = true;
+    void CheckForDamage()
+    {
+        if ((collider_.IsTouching(hero_circle_collider_) || collider_.IsTouching(hero_edge_collider_)) && damage_timer_ == 0)
+        {
+            MBehaviour = Hurt;
+            damage_timer_ = 30;
+        }
+        if(monster.HP <= 0 && isAlive)
+        {
+            MBehaviour = Die;
+            isAlive = false;
+        }  
+        if(damage_timer_ > 0)
+        {
+            --damage_timer_;
+        }
+    }
 }

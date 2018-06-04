@@ -9,20 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1295261865737318}
+  m_RootGameObject: {fileID: 1789934959035466}
   m_IsPrefabParent: 1
---- !u!1 &1295261865737318
+--- !u!1 &1789934959035466
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4767987441055060}
-  - component: {fileID: 212885306860339746}
-  - component: {fileID: 95540862567355206}
-  - component: {fileID: 50468611999242516}
-  - component: {fileID: 61228810582847438}
+  - component: {fileID: 4257656632059414}
+  - component: {fileID: 212569942238624584}
+  - component: {fileID: 95103700670263496}
+  - component: {fileID: 50740445454586708}
+  - component: {fileID: 61459987183500836}
+  - component: {fileID: 114522177577135298}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Enemy
@@ -30,12 +31,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4767987441055060
+--- !u!4 &4257656632059414
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1295261865737318}
+  m_GameObject: {fileID: 1789934959035466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.7160835, y: -0.9667355, z: 0.05734351}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,13 +44,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50468611999242516
+--- !u!50 &50740445454586708
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1295261865737318}
+  m_GameObject: {fileID: 1789934959035466}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -62,20 +63,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61228810582847438
+  m_Constraints: 4
+--- !u!61 &61459987183500836
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1295261865737318}
+  m_GameObject: {fileID: 1789934959035466}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.007798612, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,18 +87,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.75, y: 0.875}
+  m_Size: {x: 1.7032074, y: 0.875}
   m_EdgeRadius: 0
---- !u!95 &95540862567355206
+--- !u!95 &95103700670263496
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1295261865737318}
+  m_GameObject: {fileID: 1789934959035466}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92d2e12d9e767c847943f767b06601a6, type: 2}
+  m_Controller: {fileID: 9100000, guid: be62ea101199e59469daf8d15f4f7e4b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,12 +106,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &212885306860339746
+--- !u!114 &114522177577135298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789934959035466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0136ed0222342ae42837c04c85f901ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Slime
+  max_hp: 50
+  agro_range: 5
+  attack_range: 1.6
+  speed: 2
+--- !u!212 &212569942238624584
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1295261865737318}
+  m_GameObject: {fileID: 1789934959035466}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -136,8 +153,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 629487009
-  m_SortingLayer: 0
+  m_SortingLayerID: 977761647
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: bddb6453e73726a4fb445485d0399120, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

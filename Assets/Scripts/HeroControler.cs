@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameCore;
+
 
 public class HeroControler : MonoBehaviour {
 
@@ -62,13 +64,27 @@ public class HeroControler : MonoBehaviour {
 
     }
 
+    int last_direction_ = 1;
     private void Move()
     {
-        Vector3 direction = transform.right * Input.GetAxis("Horizontal");
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed_ * Time.deltaTime);
+        
+           Vector3 direction = transform.right * Input.GetAxis("Horizontal");
+           direction *= last_direction_;
+           if (direction.x < 0 && last_direction_ == 1 )
+           {
+               transform.rotation = Quaternion.Euler(0, 180, 0);
+               last_direction_ = -1;
+           }
+           else if(direction.x > 0 && last_direction_ == -1)
+           {
+               transform.rotation = Quaternion.Euler(0, 0, 0);
+               last_direction_ = 1;
+           }
 
-        sprite_.flipX = direction.x < 0;
-        State = HeroState.Run;
+           transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed_ * Time.deltaTime);
+
+           State = HeroState.Run;
+
     }
 
     private void Jump()
@@ -95,7 +111,7 @@ public class HeroControler : MonoBehaviour {
             State = HeroState.Attack1;
             last_attack_ = 1;
         }
-        attack_timer_ = 60;
+        attack_timer_ = 45;
     }
 
     private void CheckGround()
