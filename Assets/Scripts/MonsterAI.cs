@@ -2,9 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameCore;
 
 
 public class MonsterAI : MonoBehaviour {
+
+    private Enemy monster;
+
+    public string name;
+    public uint max_hp;
 
     private Rigidbody2D rigidbody_;
     private Animator animator_;
@@ -24,7 +30,7 @@ public class MonsterAI : MonoBehaviour {
 
     private System.Random randomizer = new System.Random();
 
-    public enum MonsterState { Idle, Move, Attack};
+    public enum MonsterState { Idle, Move, Attack, Hurt, Die};
     public MonsterState State
     {
         set
@@ -45,8 +51,8 @@ public class MonsterAI : MonoBehaviour {
         sprite_ = GetComponent<SpriteRenderer>();
         collider_ = GetComponent<BoxCollider2D>();
         Hero = GameObject.FindWithTag("Player");
-        start_position_ = transform.position;
-        last_position_value_ = start_position_;
+        last_position_value_ = transform.position;
+        monster = new Enemy(name, max_hp);
     }
 
     private void FixedUpdate()
@@ -79,6 +85,21 @@ public class MonsterAI : MonoBehaviour {
     private void Attack()
     {
         State = MonsterState.Attack;
+    }
+
+    private void Hurt()
+    {
+        
+    }
+
+    private void Die()
+    {
+
+    }
+
+    private void TakeDamage(int amount)
+    {
+
     }
 
     private int norm_direction_ = 1;
@@ -124,16 +145,14 @@ public class MonsterAI : MonoBehaviour {
     void CheckForPlayer()
     {
         Vector3 hero_distance = Hero.transform.position - transform.position;
-        Vector3 current_distance = start_position_ - transform.position;
 
         float agro_range_sqr = agro_range * agro_range;
 
         if(hero_distance.sqrMagnitude <= attack_range * attack_range)
         {
             MBehaviour = Attack;
-            Debug.Log("Attack");
         }
-        else if (hero_distance.sqrMagnitude <= agro_range_sqr && current_distance.sqrMagnitude <= 2 * agro_range_sqr)
+        else if (hero_distance.sqrMagnitude <= agro_range_sqr)
         {
             MBehaviour = Track;
         }

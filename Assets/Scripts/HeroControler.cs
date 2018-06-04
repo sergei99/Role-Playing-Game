@@ -8,6 +8,8 @@ public class HeroControler : MonoBehaviour {
     private Animator animator_;
     private SpriteRenderer sprite_;
     private BoxCollider2D box_collider_;
+    private CircleCollider2D circle_collider_;
+    private EdgeCollider2D edge_collider_;
 
     private int speed_ = 8;
     private int jump_force_ = 25;
@@ -39,9 +41,10 @@ public class HeroControler : MonoBehaviour {
     private void FixedUpdate()
     {
         CheckGround();
+        TimersTick();
     }
 
-    void Update ()
+    void Update()
     {
         State = HeroState.Idle1;
         if (Input.GetButton("Horizontal"))
@@ -52,12 +55,11 @@ public class HeroControler : MonoBehaviour {
         {
             Jump();
         }
-        
         if(Input.GetButtonDown("Attack1"))
         {
             Attack();
         }
-        
+
     }
 
     private void Move()
@@ -74,9 +76,26 @@ public class HeroControler : MonoBehaviour {
         rigidbody_.AddForce(transform.up * jump_force_, ForceMode2D.Impulse);
     }
 
+    private int attack_timer_ = 0;
+    private int last_attack_;
     private void Attack()
     {
-        State = HeroState.Attack1;
+        if (last_attack_ == 1 && attack_timer_ > 0)
+        {
+            State = HeroState.Attack2;
+            last_attack_ = 2;
+        }
+        else if(last_attack_ == 2 && attack_timer_ > 0)
+        {
+            State = HeroState.Attack3;
+            last_attack_ = 3;
+        }
+        else
+        {
+            State = HeroState.Attack1;
+            last_attack_ = 1;
+        }
+        attack_timer_ = 60;
     }
 
     private void CheckGround()
@@ -85,5 +104,13 @@ public class HeroControler : MonoBehaviour {
 
         is_grounded_ = colliders.Length > 1;
         
+    }
+
+    private void TimersTick()
+    {
+        if(attack_timer_ > 0)
+        {
+            --attack_timer_;
+        }
     }
 }
